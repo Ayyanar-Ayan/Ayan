@@ -1,0 +1,33 @@
+package user.input.eg;
+import java.util.Scanner;
+public class WattsSave
+{
+public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter no of TubeLight:");
+	    int light=sc.nextInt();
+	    System.out.println("Enter no of LED Light:");
+	    int led=sc.nextInt();
+			WattsSave ws=new WattsSave();
+	 int x=ws.tubelight(light);
+	 int y=ws.ledlight(led);
+      ws.savepower(x, y);
+	}
+	  int tubelight(int light)
+	{
+		int tube1=(light*40);
+		System.out.println("Tubelight total watts:"+tube1);
+		return tube1;
+	}
+	 int  ledlight(int led)
+	{
+		int tube2=(led*20);
+		System.out.println("LED Light total watts:"+tube2);
+	return tube2;
+	}
+ void savepower(int x,int y)
+{
+    int z=x-y;
+	System.out.println("You save remainnig watts:"+z);
+}
+}
